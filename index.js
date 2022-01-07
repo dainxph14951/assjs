@@ -41,36 +41,3 @@ const render = () => {
     productElement.innerHTML = template(state);
 };
 render();
-
-// const newsList = [
-//     {
-//         id: 1,
-//         title: "Vinh danh 295 học sinh FPT",
-//         contents: "Tối ngày 16/6/2018 cao đẳng FPT Folytechnic Hà Nội Đã tổ chức lễ vinh danh 'Ong vàng FPL' tuyển dụng 296 cá nhân tập thể có thành tích xuất sắc trong học tập",
-//         img: "images/img1.jpg",
-//     },
-//     {
-//         id: 2,
-//         title: "Vinh danh 295 học sinh FPT",
-//         contents: "Tối ngày 16/6/2018 cao đẳng FPT Folytechnic Hà Nội Đã tổ chức lễ vinh danh 'Ong vàng FPL' tuyển dụng 296 cá nhân tập thể có thành tích xuất sắc trong học tập",
-//         img: "images/img1.jpg",
-//     },
-//     {
-//         id: 3,
-//         title: "Vinh danh 295 học sinh FPT",
-//         contents: "Tối ngày 16/6/2018 cao đẳng FPT Folytechnic Hà Nội Đã tổ chức lễ vinh danh 'Ong vàng FPL' tuyển dụng 296 cá nhân tập thể có thành tích xuất sắc trong học tập",
-//         img: "images/img1.jpg",
-//     },
-// ];
-// const newsElement = document.querySelector("#newss");
-// if (newsElement) {
-//     const result = newsElement
-//         .map(function (new) {
-// //         return `<div class="border p-4 rounded shadow">
-// //         //     <img src="${new.img}" alt="" />
-// //         //     <h3><a href="" class="font-bold block my-3">${new.title}</a></h3>
-// //         //     <span class="text-red-500">${new.contents}</span>
-// //         //   </div>`;
-//     }).join("");
-// //     newsElement.innerHTML = result;
-// }
