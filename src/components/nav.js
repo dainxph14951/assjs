@@ -1,5 +1,5 @@
 const Nav = {
-    print() {
+    render() {
         return /* html */`
         <nav>
             <ul class="flex">
@@ -7,6 +7,10 @@ const Nav = {
                 <li><a href="/about" class="block py-3 px-4 text-white hover:bg-blue-500">About Page</a></li>
                 <li><a href="/product" class="block py-3 px-4 text-white hover:bg-blue-500">Product Page</a></li>
             </ul>
+            <div>
+            <a href="/dangky" class="text-white">Đăng Ký /</a>
+            <a href="/dangnhap" class="text-white">Đăng Nhập</a>
+            </div>
         </nav>`;
     },
 };
