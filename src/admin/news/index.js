@@ -51,11 +51,11 @@ const News = {
               <a href="#" class="text-indigo-600 hover:text-indigo-900">sửa</a>
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-            <a href="#" class="text-indigo-600 hover:text-indigo-900">xóa</a>
+            <a href="/admin/edit" class="text-indigo-600 hover:text-indigo-900">xóa</a>
           </td>
           </tr>
           <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-          <a href="#" class="text-indigo-600 hover:text-indigo-900">Thêm Tin Tức</a>
+          <a href="/admin/add" class="text-indigo-600 hover:text-indigo-900">Thêm Tin Tức</a>
         </td>
           <!-- More people... -->
         </tbody>

@@ -7,7 +7,8 @@ import NewsDetail from "./pages/NewsDetail";
 import DK from "./pages/dangKy";
 import DN from "./pages/dangNhap";
 
-const router = new Navigo("/", { linksSelector: "a" });
+// eslint-disable-next-line import/prefer-default-export
+export const router = new Navigo("/", { linksSelector: "a" });
 
 const print = (content) => {
     document.getElementById("header").innerHTML = Header.render();
