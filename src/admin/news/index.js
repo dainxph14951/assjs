@@ -1,8 +1,10 @@
+import data from "../../data";
+
 const News = {
     render() {
         return /* html */`
-<div class="flex flex-col">
-<div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+<div class="max-w-5xl mx-auto">
+<div class="-my-0 sm:-mx-6 lg:-mx-8">
   <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
     <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
       <table class="min-w-full divide-y divide-gray-200">
@@ -20,23 +22,31 @@ const News = {
             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
               Nội Dung Chính
             </th>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-             Action
+            <th scope="col" class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+             Sửa
             </th>
+            <th scope="col" class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Xóa
+           </th>
           </tr>
         </thead>
         <tbody class="bg-white divide-y divide-gray-200">
+        ${data.map((post) => `
           <tr>
             <td class="px-6 py-4 whitespace-nowrap">
               <div class="flex items-center">
                 <div class="flex-shrink-0 h-10 w-10">
-                  <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60" alt="">
+                <a href="/news/${post.id}">
+                  <img class="h-10 w-10 rounded-full" src="${post.img}" alt="">
+                </a>
                 </div>
                 </div>
               </div>
             </td>
             <td class="px-6 py-4 whitespace-nowrap">
-              <div class="text-sm text-gray-900">Huyến Mại Cực Sốc</div>
+            <a href="/news/${post.id}">
+              <div class="text-sm text-gray-900">${post.title}</div>
+            </a>
 
             </td>
             <td class="px-6 py-4 whitespace-nowrap">
@@ -44,20 +54,22 @@ const News = {
                 12/12/2021
               </span>
             </td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-              khuyến Mãi Cho tất cả ai tham gia mua sắm trực tiếp tại cửa hàng.
+            <td class="px-6 py-4 text-sm text-gray-400">
+             ${post.desc}
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-              <a href="#" class="text-indigo-600 hover:text-indigo-900">sửa</a>
+              <a href="/admin/edit" class="text-indigo-600 hover:text-indigo-900">sửa</a>
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-            <a href="/admin/edit" class="text-indigo-600 hover:text-indigo-900">xóa</a>
+            <a href="" class="text-indigo-600 hover:text-indigo-900">xóa</a>
           </td>
           </tr>
+          `).join("")}
           <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
           <a href="/admin/add" class="text-indigo-600 hover:text-indigo-900">Thêm Tin Tức</a>
         </td>
           <!-- More people... -->
+      
         </tbody>
       </table>
     </div>

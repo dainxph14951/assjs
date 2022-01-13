@@ -1,6 +1,7 @@
 const addNews = {
     render() {
         return /* html */`
+        <div class="max-w-5xl mx-auto">
         <form action="#" method="POST">
                 <div class="shadow overflow-hidden sm:rounded-md">
                  
@@ -34,6 +35,7 @@ const addNews = {
                     </div>
                 </div>  
                 </form>
+                </div>
         `;
     },
 };
