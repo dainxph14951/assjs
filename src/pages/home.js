@@ -5,7 +5,7 @@ const HomePage = {
         return /* html */`
         <div class="max-w-5xl mx-auto"> 
             <div class="my-3">
-                <img src="https://picsum.photos/1000/300" />
+                <img src="https://caodang.fpt.edu.vn/wp-content/uploads/Banner-PC-1.png" />
             </div>
             <div class="news">
                 <h2 class="text-2xl font-semibold my-4">Tin tức học tập</h2>

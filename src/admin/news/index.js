@@ -8,10 +8,19 @@ const News = {
   <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
     <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
       <table class="min-w-full divide-y divide-gray-200">
+
+      <div class="mt-5 flex lg:mt-0 lg:ml-4">
+      <a href="/admin/add" class="sm:ml-3">
+          <button type="button"
+          class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          Thêm mới
+          </button>
+      </a>
+      </div>
         <thead class="bg-gray-50">
           <tr>
             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Hinh Ảnh
+              Ảnh
             </th>
             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
             Tiêu Đề
@@ -58,16 +67,14 @@ const News = {
              ${post.desc}
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-              <a href="/admin/edit" class="text-indigo-600 hover:text-indigo-900">sửa</a>
+              <a href="/admin/edit" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-500 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">sửa</a>
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-            <a href="" class="text-indigo-600 hover:text-indigo-900">xóa</a>
+            <a href="" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-rose-700 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">xóa</a>
           </td>
           </tr>
           `).join("")}
-          <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-          <a href="/admin/add" class="text-indigo-600 hover:text-indigo-900">Thêm Tin Tức</a>
-        </td>
+
           <!-- More people... -->
       
         </tbody>

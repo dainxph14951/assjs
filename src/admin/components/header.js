@@ -12,15 +12,15 @@ const HeaderAdd = {
         <div class="hidden md:block">
           <div class="ml-1 flex items-baseline space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="/admin/dashboard" class="bg-gray-900 text-white px-3 py-5 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
+            <a href="/admin/dashboard" class="bg-gray-900 text-white px-3 py-5 rounded-md text-sm font-medium" aria-current="page">Trang Admin</a>
 
-            <a href="/admin/news" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">News</a>
+            <a href="/admin/news" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">QL Tin Tức</a>
 
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">QL Tài Khoản</a>
 
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">QL Sản Phẩm</a>
 
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reports</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">QL Bình Quận</a>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@ const HeaderAdd = {
             </div>
           </div>
           <div class="ml-3">
-            <div class="text-base font-medium leading-none text-white">Tom Cook</div>
+            <div class="text-base font-medium leading-none text-white">Đại Nguyễn</div>
           </div>
           <button type="button" class="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
             <span class="sr-only">View notifications</span>
@@ -51,23 +51,25 @@ const HeaderAdd = {
           </button>
         </div>
         <div class="">
-          <a href="#" class=" px-5 rounded-md text-base font-medium text-gray-200 hover:text-white hover:bg-gray-700">Settings</a>
+          <a href="#" class=" px-5 rounded-md text-base font-medium text-gray-200 hover:text-white hover:bg-gray-700">Vào Website</a>
 
-          <a href="#" class="px-5 rounded-md text-base font-medium text-gray-200 hover:text-white hover:bg-gray-700">Sign out</a>
+          <a href="#" class=" px-5 rounded-md text-base font-medium text-gray-200 hover:text-white hover:bg-gray-700">Cài Đặt</a>
+
+          <a href="#" class="px-5 rounded-md text-base font-medium text-gray-200 hover:text-white hover:bg-gray-700">Đăng Xuất</a>
         </div>
       </div>
     </div>
   </nav>
-            <div class="min-h-full">
-            <header class="bg-white shadow">
+           <div class="min-h-full ">
+            <header class="shadow bg-gray-800">
               <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <h1 class="text-3xl font-bold text-gray-900">
-                  Dashboard
+              <h1 class="text-3xl font-bold text-gray-900">
+                
                 </h1>
-              </div>
+             </div>
             </header>
             
-          </div>
+           </div>
             </div>
         `;
     },

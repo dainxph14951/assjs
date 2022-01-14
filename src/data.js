@@ -118,5 +118,12 @@ const data = [
         desc: "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
         id: "17",
     },
+    {
+        createdAt: "2022-01-10T20:16:49.772Z",
+        title: "Heather Miller",
+        img: "http://placeimg.com/640/480/nightlife",
+        desc: "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+        id: "18",
+    },
 ];
 export default data;
