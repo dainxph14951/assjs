@@ -45,17 +45,16 @@ const News = {
             <td class="px-6 py-4 whitespace-nowrap">
               <div class="flex items-center">
                 <div class="flex-shrink-0 h-10 w-10">
-                <a href="/news/${post.id}">
+
                   <img class="h-10 w-10 rounded-full" src="${post.img}" alt="">
-                </a>
+
                 </div>
                 </div>
               </div>
             </td>
             <td class="px-6 py-4 whitespace-nowrap">
-            <a href="/news/${post.id}">
-              <div class="text-sm text-gray-900">${post.title}</div>
-            </a>
+
+            <div class="text-sm text-gray-900">${post.title}</div>
 
             </td>
             <td class="px-6 py-4 whitespace-nowrap">
@@ -67,7 +66,7 @@ const News = {
              ${post.desc}
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-              <a href="/admin/edit" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-500 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">sửa</a>
+              <a href="/admin/news/edit/${post.id}" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-500 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">sửa</a>
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
             <a href="" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-rose-700 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">xóa</a>

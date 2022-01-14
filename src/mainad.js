@@ -22,8 +22,9 @@ router.on({
     "/admin/add": () => {
         print(addNews.render());
     },
-    "/admin/edit": () => {
-        print(editNews.render());
+    "/admin/news/edit/:id": ({ data }) => {
+        const { id } = data;
+        print(editNews.render(id));
     },
 
 });

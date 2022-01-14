@@ -8,7 +8,7 @@ const HomePage = {
                 <img src="https://caodang.fpt.edu.vn/wp-content/uploads/Banner-PC-1.png" />
             </div>
             <div class="news">
-                <h2 class="text-2xl font-semibold my-4">Tin tức học tập</h2>
+                <h2 class="text-2xl font-semibold my-4">TIN TỨC HỌC TẬP</h2>
                 <div class="grid grid-cols-3 gap-8">
                     ${data.map((post) => `
                         <div class="border p-4">
