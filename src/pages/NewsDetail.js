@@ -6,7 +6,7 @@ const NewsDetail = {
 
         return `<div class="max-w-5xl mx-auto">
             <h1>${found.title}</h1>
-            <img src="${found.img}" />
+            <img class="max-w-5xl mx-auto" src="${found.img}" />
             <p>${found.desc}</p>
         </div>`;
     },
