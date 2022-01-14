@@ -2,9 +2,12 @@ const DN = {
     render() {
         return /* html */`
             <div class="max-w-5xl mx-auto">
-                <h1>Trang Đăng Nhập</h1>
+                <h1>TRANG ĐĂNG NHẬP</h1>
 
                 <form>
+                <div class="py-4">
+                <img src="https://caodang.fpt.edu.vn/wp-content/uploads/logo-3.png" class="mx-auto" />
+               </div>
                 <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div class="max-w-md w-full space-y-8">
                   <form class="mt-8 space-y-6" action="#" method="POST">

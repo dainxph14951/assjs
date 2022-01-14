@@ -2,8 +2,11 @@ const DK = {
     render() {
         return /* html */`
             <div class="max-w-5xl mx-auto">
-                <h1>Trang Đăng Ký</h1>
+                <h1>TRANG ĐĂNG KÝ</h1>
                 <div>
+                <div class="py-4">
+                <img src="https://caodang.fpt.edu.vn/wp-content/uploads/logo-3.png" class="mx-auto" />
+               </div>
             <div class="mt-10 sm:mt-0">
                 <div class="mt-5 md:mt-0 md:col-span-2">
                 <form action="#" method="POST">
