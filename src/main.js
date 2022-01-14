@@ -2,6 +2,9 @@ import Navigo from "navigo";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import AboutPage from "./pages/about";
+import DaoTao from "./pages/daotao";
+import SinhVien from "./pages/sinhvien";
+import TuyenSinh from "./pages/tuyensinh";
 import HomePage from "./pages/home";
 import NewsDetail from "./pages/NewsDetail";
 import DK from "./pages/dangKy";
@@ -22,6 +25,15 @@ router.on({
     },
     "/about": () => {
         print(AboutPage.render());
+    },
+    "/daotao": () => {
+        print(DaoTao.render());
+    },
+    "/sinhvien": () => {
+        print(SinhVien.render());
+    },
+    "/tuyendung": () => {
+        print(TuyenSinh.render());
     },
     "/dangky": () => {
         print(DK.render());

@@ -5,7 +5,7 @@ const HomePage = {
         return /* html */`
         <div class="max-w-5xl mx-auto"> 
             <div class="my-3">
-                <img src="images/Banner.jpg" />
+                <img src="https://picsum.photos/1000/300" />
             </div>
             <div class="news">
                 <h2 class="text-2xl font-semibold my-4">Tin tức học tập</h2>
