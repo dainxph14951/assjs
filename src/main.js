@@ -45,6 +45,7 @@ router.on({
         const { id } = data;
         print(NewsDetail.render(id));
     },
+
 });
 
 router.resolve();
