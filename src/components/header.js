@@ -1,8 +1,8 @@
 const Header = {
     render() {
-        return /* html */`    <div class="vapare">
-        <header class="sticky-top">
-            <div class="inner-header container">
+        return /* html */`<div class="vapare">
+        <header class=" sticky-top w-full">
+            <div class="inner-header container ">
                 <div class="logo">
                     <a href=""><img src="https://pubcdn.ivymoda.com/images/logo.png" alt=""></a>
                 </div>
@@ -20,8 +20,10 @@ const Header = {
                 </nav>
                 <div class="icon">
                     <!-- <a href=""><i class="fas fa-user-lock" style="color: black !important;"></i></a> -->
-                    <a href=""><i class="fas fa-bell" style="color: black !important;"></i></a>
-                    <a href=""><i class="fas fa-shopping-bag" style="color: black !important;"></i></a>
+                    <a href="" class="p-1"><i class="fas fa-bell " style="color: black !important;"></i></a>
+                    <a href="" class="p-1"><i class="fas fa-shopping-bag" style="color: black !important;"></i></a>
+                    <a href="" class="p-1"><i class="fas fa-fingerprint" style="color: black !important;"></i></a>
+                    <a href="" class="p-1"><i class="fas fa-user-lock" style="color: black !important;"></i></a>
                 </div>
             </div>
 
