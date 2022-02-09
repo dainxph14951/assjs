@@ -1,7 +1,9 @@
+import axios from "axios";
 import data from "../data";
 
 const NewList = {
     render() {
+       async const respons = await axios.get('')
         return /* html */`
         <h2 class="font-semibold text-2xl uppercase my-4">Tin tức học tập</h2>            
         <div class="grid grid-cols-3 gap-8">
