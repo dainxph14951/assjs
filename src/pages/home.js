@@ -1,7 +1,9 @@
-import data from "../data";
+import { getAll } from "../api/posts";
 
 const HomePage = {
-    render() {
+    async  render() {
+        const { data } = await getAll();
+
         return /* html */`
         <div class="max-w-5xl mx-auto"> 
             <div class="my-3">

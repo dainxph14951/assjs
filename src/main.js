@@ -17,6 +17,7 @@ const print = (content) => {
     document.getElementById("header").innerHTML = Header.render();
     document.getElementById("content").innerHTML = content;
     document.getElementById("footer").innerHTML = Footer.render();
+    if (content.afterRender) content.afterRender();
 };
 
 router.on({
@@ -45,7 +46,18 @@ router.on({
         const { id } = data;
         print(NewsDetail.render(id));
     },
-
 });
 
 router.resolve();
+
+// function loadScript(src, callback) {
+//     const script = document.createElement("script");
+//     script.src = src;
+//     script.onload = () => {
+//         callback(null, script);
+//     };
+//     script.onerror = () => {
+//         callback("Loi roi");
+//     };
+//     document.head.append(script);
+// }

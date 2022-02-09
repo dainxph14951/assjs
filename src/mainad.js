@@ -1,7 +1,7 @@
 import FooterAdd from "./admin/components/footer";
 import Header from "./admin/components/header";
-import News from "./admin/news/index";
 import addNews from "./admin/news/add-new";
+import News from "./admin/news/index";
 import editNews from "./admin/news/edit-new";
 import pageAdd from "./admin/dashboard/home";
 

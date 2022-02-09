@@ -2,7 +2,7 @@ const DN = {
     render() {
         return /* html */`
             <div class="max-w-5xl mx-auto">
-                <h1>TRANG ĐĂNG NHẬP</h1>
+                <h2 >TRANG ĐĂNG NHẬP</h2>
 
                 <form>
                 <div class="py-4">
@@ -51,7 +51,8 @@ const DN = {
                     </div>
                   </form>
                 </div>
-              </div          
+              </div      
+                  
         `;
     },
 };

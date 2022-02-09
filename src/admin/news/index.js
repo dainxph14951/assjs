@@ -1,3 +1,4 @@
+import axios from "axios";
 import data from "../../data";
 
 const News = {
@@ -91,7 +92,9 @@ const News = {
               <a href="/admin/news/edit/${post.id}" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-500 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">sửa</a>
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-            <a href="" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-rose-700 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">xóa</a>
+            
+            <button data-id="${post.id}" class="btn bg-red-500 text-white inline-block py-3 px-5 rounded">Delete</button>
+       
           </td>
           </tr>
           `).join("")}
@@ -105,6 +108,21 @@ const News = {
 </div>
 </div>
 `;
+    },
+    afterRender() {
+        // Lấy danh sách button
+        const btns = document.querySelectorAll(".btn");
+        // tạo vòng lặp và lấy ra từng button
+        btns.forEach((btn) => {
+            const { id } = btn.dataset;
+            // Viết sự kiện khi click vào button call api và xóa sản phẩm
+            btn.addEventListener("click", () => {
+                const confirm = window.confirm("Bạn có chắc chắn muốn xóa không?");
+                if (confirm) {
+                    axios.delete(`https://5e79b4b817314d00161333da.mockapi.io/posts/${id}`);
+                }
+            });
+        });
     },
 };
 export default News;
