@@ -2,8 +2,9 @@ import axios from "axios";
 import data from "../data";
 
 const NewList = {
-    render() {
-       async const respons = await axios.get('')
+    async render() {
+        const response = await axios.get("https://5e79b4b817314d00161333da.mockai.io/posts");
+        console.log(response);
         return /* html */`
         <h2 class="font-semibold text-2xl uppercase my-4">Tin tức học tập</h2>            
         <div class="grid grid-cols-3 gap-8">
