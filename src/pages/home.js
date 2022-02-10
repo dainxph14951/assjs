@@ -4,7 +4,7 @@ import Header from "../components/header";
 import NewList from "../components/newsList";
 
 const HomePage = {
-    render() {
+    async render() {
         return /* html */`
             ${Header.render()}
             <div class="max-w-5xl mx-auto">
@@ -12,7 +12,7 @@ const HomePage = {
                    ${Banner.render()}
                 </div>
                 <div class="news">
-                    ${NewList.render()}
+                    ${await NewList.render()}
                 </div>
             </div>
             ${Footer.render()}
@@ -71,7 +71,7 @@ export default HomePage;
 
 // const printA = async () => {
 //     try {
-//         const result = await render(); 
+//         const result = await render();
 //         result.push(5);
 //         console.log('result', result);
 //     } catch (error) {

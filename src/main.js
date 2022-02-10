@@ -7,38 +7,42 @@ import DN from "./pages/dangNhap";
 import DashBoardPage from "./pages/admin/dashboard";
 import AddNewsPage from "./pages/admin/news/add";
 import AdminNewsPage from "./pages/admin/news";
+import NewListAdmin from "./pages/AdminPost";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
-const print = (content) => {
-    document.getElementById("content").innerHTML = content;
+const print = async (content, id) => {
+    document.getElementById("content").innerHTML = await content.render(id);
+    if (content.afterRender) content.afterRender(id);
 };
 
 router.on({
     "/": () => {
-        print(HomePage.render());
+        print(HomePage);
     },
     "/about": () => {
-        print(AboutPage.render());
+        print(AboutPage);
     },
     "/dangky": () => {
-        print(DK.render());
+        print(DK);
     },
     "/dangnhap": () => {
-        print(DN.render());
+        print(DN);
     },
     "/news/:id": ({ data }) => {
-        const { id } = data;
-        print(NewsDetail.render(id));
+        print(NewsDetail, data.id);
     },
     "/admin/dashboard": () => {
-        print(DashBoardPage.render());
+        print(DashBoardPage);
     },
     "/admin/news": () => {
-        print(AdminNewsPage.render());
+        print(AdminNewsPage);
     },
     "/admin/news/add": () => {
-        print(AddNewsPage.render());
+        print(AddNewsPage);
+    },
+    "/admin/news/list": () => {
+        print(NewListAdmin);
     },
 });
 
@@ -59,17 +63,17 @@ router.resolve();
 // }
 // sum(a, b, display);
 
-function loadScript(src, callback) {
-    const script = document.createElement("script");
-    script.src = src;
-    script.onload = () => {
-        callback(null, script);
-    };
-    script.onerror = () => {
-        callback("Loi roi");
-    };
-    document.head.append(script);
-}
+// function loadScript(src, callback) {
+//     const script = document.createElement("script");
+//     script.src = src;
+//     script.onload = () => {
+//         callback(null, script);
+//     };
+//     script.onerror = () => {
+//         callback("Loi roi");
+//     };
+//     document.head.append(script);
+// }
 
 // callback in callback
 // loadScript('https://abc.com/index1.js', function(error, script){
