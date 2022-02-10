@@ -13,38 +13,38 @@ import DN from "./pages/dangNhap";
 // eslint-disable-next-line import/prefer-default-export
 export const router = new Navigo("/", { linksSelector: "a" });
 
-const print = (content) => {
+const print = async (content, id) => {
     document.getElementById("header").innerHTML = Header.render();
-    document.getElementById("content").innerHTML = content;
+    document.getElementById("content").innerHTML = await content.render();
     document.getElementById("footer").innerHTML = Footer.render();
     if (content.afterRender) content.afterRender();
 };
 
 router.on({
     "/": () => {
-        print(HomePage.render());
+        print(HomePage);
     },
     "/about": () => {
-        print(AboutPage.render());
+        print(AboutPage);
     },
     "/daotao": () => {
-        print(DaoTao.render());
+        print(DaoTao);
     },
     "/sinhvien": () => {
-        print(SinhVien.render());
+        print(SinhVien);
     },
     "/tuyendung": () => {
-        print(TuyenSinh.render());
+        print(TuyenSinh);
     },
     "/dangky": () => {
-        print(DK.render());
+        print(DK);
     },
     "/dangnhap": () => {
-        print(DN.render());
+        print(DN);
     },
     "/news/:id": ({ data }) => {
         const { id } = data;
-        print(NewsDetail.render(id));
+        print(NewsDetail, id);
     },
 });
 

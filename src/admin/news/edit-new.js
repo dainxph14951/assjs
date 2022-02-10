@@ -1,8 +1,8 @@
-import data from "../../data";
+import axios from "axios";
 
 const editNews = {
-    render(id) {
-        const router = data.find((element) => element.id === id);
+    async render() {
+        const { data } = await;
         return /* html */`<div class="max-w-5xl mx-auto">
     <form action="#" method="POST">
     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -40,14 +40,14 @@ const editNews = {
                 </span>
                 <input type="text" name="tieude"
                     class="mt-1 px-3 py-2 bg-white border shadow-sm border-gray-300 placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-                    value="${router.title}" />
+                    value="${data.title}" />
             </div>
             <div class="col-span-6 sm:col-span-3">
                 <span
                     class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
-                    Hình Ảnh Hiện Tại: ${router.img}
+                    Hình Ảnh Hiện Tại: ${data.img}
                 </span>
-                <img src="${router.img}" alt="">
+                <img src="${data.img}" alt="">
                 <input type="file" name="hinhanh"
                     class="mt-1 px-3 py-2 bg-white border shadow-sm border-gray-300 placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
                     value=""/>

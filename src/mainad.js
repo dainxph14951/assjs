@@ -7,24 +7,24 @@ import pageAdd from "./admin/dashboard/home";
 
 import { router } from "./main";
 
-const print = (dashboard) => {
+const print = async (dashboard, id) => {
     document.getElementById("header").innerHTML = Header.render();
-    document.getElementById("content").innerHTML = dashboard;
+    document.getElementById("content").innerHTML = await dashboard.render();
     document.getElementById("footer").innerHTML = FooterAdd.render();
 };
 router.on({
     "/admin/dashboard": () => {
-        print(pageAdd.render());
+        print(pageAdd);
     },
     "/admin/news": () => {
-        print(News.render());
+        print(News);
     },
     "/admin/add": () => {
-        print(addNews.render());
+        print(addNews);
     },
     "/admin/news/edit/:id": ({ data }) => {
         const { id } = data;
-        print(editNews.render(id));
+        print(editNews, id);
     },
 
 });
