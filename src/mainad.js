@@ -9,8 +9,9 @@ import { router } from "./main";
 
 const print = async (dashboard, id) => {
     document.getElementById("header").innerHTML = Header.render();
-    document.getElementById("content").innerHTML = await dashboard.render();
+    document.getElementById("content").innerHTML = await dashboard.render(id);
     document.getElementById("footer").innerHTML = FooterAdd.render();
+    if (dashboard.afterRenders) dashboard.afterRenders();
 };
 router.on({
     "/admin/dashboard": () => {
@@ -22,7 +23,7 @@ router.on({
     "/admin/add": () => {
         print(addNews);
     },
-    "/admin/news/edit/:id": ({ data }) => {
+    "/admin/news/:id/edit": ({ data }) => {
         const { id } = data;
         print(editNews, id);
     },
