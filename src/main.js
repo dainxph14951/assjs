@@ -8,6 +8,7 @@ import DashBoardPage from "./pages/admin/dashboard";
 import AddNewsPage from "./pages/admin/news/add";
 import AdminNewsPage from "./pages/admin/news";
 import NewListAdmin from "./pages/AdminPost";
+import EditNewsPage from "./pages/admin/news/edit";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -40,6 +41,9 @@ router.on({
     },
     "/admin/news/add": () => {
         print(AddNewsPage);
+    },
+    "/admin/news/:id/edit": () => {
+        print(EditNewsPage);
     },
     "/admin/news/list": () => {
         print(NewListAdmin);

@@ -1,7 +1,10 @@
+import axios from "axios";
 import NavAdmin from "../../../components/NavAdmin";
+import { getAll } from "../../../api/posts";
 
 const AdminNewsPage = {
-    render() {
+    async render() {
+        const response = await getAll(); // chờ axios lấy dự liệu gán gtri vào
         return /* html */`
         <div class="min-h-full">
             ${NavAdmin.render()}
@@ -27,13 +30,55 @@ const AdminNewsPage = {
             <main>
                 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
                     <div class="px-4 py-6 sm:px-0">
-                    <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
+                    <div class="border-4 border-dashed border-gray-200 rounded-lg h-96">
+                    <table>
+                    <thead>
+                      <tr>
+                        <th>STT</th>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>decs</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    ${response.data.map((post, index) => `
+                    <tr>
+                    <td>${index + 1}</td>
+                        <td href="/news/${post.id}">
+                            <img src="${post.img}" alt="" width="50" />
+                        </td>
+                        <td class="my-3"><a href="/news/${post.id}" class="font-semibold text-lg text-orange-500 ">${post.title}</a></td>
+                        <td>
+                        <a href="/admin/news/${post.id}/edit">Edit</a>
+                        </td>
+                        <td>
+                        <button data-id="${post.id}" class="btn">Delete</button>
+                        </td>
+                    </tr>
+            `).join("")}
+                    </tbody>
+                  </table>
+                    
+                    
+                    </div>
                     </div>
                 </div>
             </main>
         </div>
     
                     `;
+    },
+    afterRender() {
+        const btns = document.querySelectorAll(".btn");
+        btns.forEach((btn) => {
+            const { id } = btn.dataset;
+            btn.addEventListener("click", () => {
+                const confirm = window.confirm("Bạn Có Chắc Chắn Không");
+                if (confirm) {
+                    axios.delete(`https://5e79b4b817314d00161333da.mockapi.io/posts/${id}`);
+                }
+            });
+        });
     },
 };
 export default AdminNewsPage;
