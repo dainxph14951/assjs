@@ -125,6 +125,11 @@
       "email": "dominhtanqaz@gmail.com",
       "password": "$2a$10$YDzgZHG3PwqBIhXmOqciIeQ8lNtGy6JlMVoEAW90.TVm9Dy3wyV6K",
       "id": 1
+    },
+    {
+      "email": "xuandai300092@gmail.com",
+      "password": "$2a$10$U4dMrLH5iOp1r3pdvfcIkOj27sYokVcZU/ho78ROPU0.BfG.6ghBS",
+      "id": 2
     }
   ]
 }
