@@ -9,6 +9,7 @@ import HomePage from "./pages/home";
 import NewsDetail from "./pages/NewsDetail";
 import DK from "./pages/dangKy";
 import DN from "./pages/dangNhap";
+import ProductsPage from "./pages/products";
 
 // eslint-disable-next-line import/prefer-default-export
 export const router = new Navigo("/", { linksSelector: "a" });
@@ -41,6 +42,9 @@ router.on({
     },
     "/dangnhap": () => {
         print(DN);
+    },
+    "/products": () => {
+        print(ProductsPage);
     },
     "/news/:id": ({ data }) => {
         const { id } = data;
