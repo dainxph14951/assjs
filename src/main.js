@@ -9,6 +9,9 @@ import AddNewsPage from "./pages/admin/news/add";
 import AdminNewsPage from "./pages/admin/news";
 import NewListAdmin from "./pages/AdminPost";
 import EditNewsPage from "./pages/admin/news/edit";
+import ProductsPage from "./pages/products/index";
+import ProductDetailPage from "./pages/products/detail";
+import CartPage from "./pages/cart";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -30,6 +33,11 @@ router.on({
     "/dangnhap": () => {
         print(DN);
     },
+    "/products": () => print(ProductsPage),
+    "/products/:id": ({ data }) => {
+        const { id } = data;
+        print(ProductDetailPage, id);
+    },
     "/news/:id": ({ data }) => {
         print(NewsDetail, data.id);
     },
@@ -48,6 +56,7 @@ router.on({
     "/admin/news/list": () => {
         print(NewListAdmin);
     },
+    "/cart": () => print(CartPage),
 });
 
 router.resolve();
